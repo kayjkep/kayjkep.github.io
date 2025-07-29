@@ -1,0 +1,44 @@
+body {
+  background-color: #cbc3e3;
+  font-family: "Kiwi Maru", serif;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 0px;
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #5b4b8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4a3b75;
+}
+
+img {
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+#page-wrapper {
+  transition: opacity 1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}

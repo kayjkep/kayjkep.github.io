@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kayla Keplinger's Portfolio</title>
+    <link rel="stylesheet" href="desktop.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body>
+    <div id="desktop">
+    <div id="background">
+      <p>⋆⭒˚.⋆ Click on the files and folders to get to know me better ⋆⭒˚.⋆</p>
+      <img src="gif/cinnamoroll.gif" alt="cinnamoroll gif" style="width=100px; height=100px;">
+    </div>
+    <div id="icons">
+      <div class="icon-wrapper" onclick="openWindowById('about-window')">
+        <img src="\images\1.ico" alt="file icon" width="50" height="50" />
+        <span class="icon-label">about-me.txt</span>
+      </div>
+
+      <div class="icon-wrapper" onclick="openWindowById('work-history-window')">
+        <img src="\images\1.ico" alt="file icon" width="50" height="50" />
+        <span class="icon-label">work-history.txt</span>
+      </div>
+
+      <div class="icon-wrapper" onclick="openWindowById('skills-window')">
+        <img src="\images\1.ico" alt="file icon" width="50" height="50" />
+        <span class="icon-label">skills.txt</span>
+      </div>
+
+      <div class="icon-wrapper">
+        <img
+          src="\images\3.ico"
+          alt="file icon"
+          width="50"
+          height="50"
+          onclick="openWindowById('projects-window')"
+        />
+        <span class="icon-label">projects</span>
+      </div>
+
+      <div class="icon-wrapper" onclick="openWindowById('github-window')">
+        <img
+          src="\images\githubblue.jpg"
+          class="rounded-img"
+          alt="GitHub Icon"
+          width="50"
+          height="50"
+        />
+        <span class="icon-label">github.txt</span>
+      </div>
+      <div class="icon-wrapper" onclick="openWindowById('linkedin-window')">
+        <img
+          src="\images\linkedin.jpg"
+          class="rounded-img"
+          alt="LinkedIn Icon"
+          width="50"
+          height="50"
+        />
+        <span class="icon-label">linkedin.txt</span>
+      </div>
+      <div class="icon-wrapper" onclick="openWindowById('email-window')">
+        <img
+          src="\images\Mail app icon.jpg"
+          class="rounded-img"
+          alt="Email Icon"
+          width="50"
+          height="50"
+        />
+        <span class="icon-label">email.txt</span>
+      </div>
+      <div class="icon-wrapper" onclick="openWindowById('photos-window')">
+        <img
+          src="\images\3.ico"
+          alt="Photo Album Icon"
+          width="50"
+          height="50"
+        />
+        <span class="icon-label">photos</span>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <div id="taskbar">
+      <div class="hotbar-left">
+        <div class="dropup">
+          <button id="start-btn">⏻</button>
+          <div class="dropup-content">
+            <a id="lock-btn">⏻ Shut Down</a>
+          </div>
+        </div>
+      </div>
+      <div id="taskbar-windows"></div>
+      <div class="hotbar-right">
+        <div id="calendar">
+        </div>
+        <div id="datetime"></div>
+      </div>
+    </div>
+    <!-- Popup window for aboutme.txt -->
+    <div id="about-window" class="window hidden">
+      <div class="window-header">
+        <span>about-me.txt (these windows are draggable!)</span>
+        <button class="close-btn" onclick="closeAndResetWindow('about-window')">✖</button>
+      </div>
+      <div class="window-content-about-me">
+        <p>
+          Hello! I'm Kayla Keplinger, a 23 year old web developer passionate
+          about interactive design! I graduated from Cleveland State University
+          in May 2025 and currently live in Seven Hills, Ohio.
+        </p>
+        <p>
+          I'm currently a self employed entrepreneur running my own
+          <a
+            href="https://www.etsy.com/shop/madebykjk?ref=dashboard-header"
+            target="_blank"
+            >Etsy shop</a
+          >! I sell handmade crocheted toys and I am hoping to branch out to
+          selling clay charms. In my free time I like to weight lift, hang out
+          with my friends, and study Japanese.
+        </p>
+        <img src="gif/kitty.gif" alt="A cat from the game nekoatsume" style="width: 100; height: 100px; float: right;">
+      </div>
+    </div>
+    <!-- Popup window for workhistory.txt -->
+    <div id="work-history-window" class="window hidden">
+      <div class="window-header">
+        <span>work-history.txt</span>
+        <button class="close-btn" onclick="closeAndResetWindow('work-history-window')">✖</button>
+      </div>
+      <div class="window-content-work-history">
+        <p>
+          <b
+            >Self Employed Entrepreneur | Etsy shop:
+            <a
+              href="https://www.etsy.com/shop/madebykjk?ref=dashboard-header"
+              target="_blank"
+              >@madebykjk</a
+            ></b
+          > | August 2024 to Present
+          <ul>
+            <li>Designed and sold custom crochet items; handled inventory, fulfillment, and customer inquiries</li>
+            <li>Managed shop's social media presence and ensured timely shipping and high customer satisfaction</li>
+          </ul>
+        </p>
+        <p>
+          <b>The Global Career Accelerator Web Developer Trainee</b> | August 2024 to December 2024
+          <ul>
+            <li>Developed responsive web applications and games using HTML, CSS, JavaScript, and Bootstrap</li>
+            <li>Integrated third-party APIs; debugged and improved existing projects </li>
+            <li>Applied UX research principles and collaborated with global teams on technical tasks </li>
+          </ul>
+        </p>
+        <p>
+          <b>Retail & Food Service Roles</b> | 2020 to 2024 Kohl's, Chipotle, JOANN's, Giant Eagle
+           <ul>
+            <li>Delivered exceptional customer service in fast-paced environments </li>
+            <li>Processed transactions accurately; managed in-store and curbside orders </li>
+            <li>Maintained clean, organized spaces and restocked supplies efficiently</li>
+            <li>Collaborated with team members to meet customer needs during peak hours </li>
+           </ul>
+        </p>
+      </div>
+    </div>
+    <!-- Popup for skills.txt -->
+    <div id="skills-window" class="window hidden">
+      <div class="window-header">
+        <span>skills.txt</span>
+        <button class="close-btn" onclick="closeAndResetWindow('skills-window')">✖</button>
+      </div>
+      <div class="window-content-skills">
+        <p>
+          <ul>
+            <li><b>Coding Languages:</b> HTML, CSS, JavaScript, C++/C, Python, Java, SQL, Kotlin, C/C++, C#</li>
+            <li><b>Other Expertises:</b> UX Research, Programming Fundamentals, Computational Thinking, Object Oriented Programming</li>
+            <li><b>Soft Skills:</b> Team Leadership, Intercultural Communication, Collaboration</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <!-- Popup window for github.txt -->
+    <div id="github-window" class="window hidden">
+      <div class="window-header">
+        <span>github.txt</span>
+        <button class="close-btn" onclick="closeAndResetWindow('github-window')">✖</button>
+      </div>
+      <div class="window-content-github">
+        <p>
+          My Github is
+          <a href="https://github.com/kayjkep" target="_blank">@kayjkep</a>.
+        </p>
+      </div>
+    </div>
+    <!-- Popup window for LinkedIn -->
+    <div id="linkedin-window" class="window hidden">
+      <div class="window-header">
+        <span>linkedin.txt</span>
+        <button class="close-btn" onclick="closeAndResetWindow('linkedin-window')">✖</button>
+      </div>
+      <div class="window-content-linkedin">
+        <p>
+          You can view my LinkedIn profile <a href="https://www.linkedin.com/in/kayla-keplinger-8372aa2b9" target="_blank">here</a>!
+          Feel free to add me if you'd like!
+        </p>
+      </div>
+    </div>
+    <!-- Popup window for projects -->
+    <div id="projects-window" class="window hidden">
+      <div class="window-header">
+        <span>projects</span>
+        <button class="close-btn" onclick="closeAndResetWindow('projects-window')">✖</button>
+      </div>
+      <div class="window-content-projects">
+        <p><a href="https://7rvqmz.csb.app/" target="_blank">My Original Portfolio Website</a> | Nov 2024</p>
+        <ul>
+          <li>My first ever portfolio website that I built as a web dev trainee</li>
+          <li>Developed from scratch using HTML, CSS, JavaScript, and Bootstrap frameworks to enhance functionality</li>
+          <li><b>Fun fact:</b> my headshot was taken by my mother in her backyard</li>
+        </ul>
+        <p><a href="https://missiontopsyche-iridium.github.io/iridium_21m_web_game-csu/" target="_blank">NASA Psyche Web-based Game</a> | Sponsored by ASU/NASA</p>
+        <ul>
+          <li>Led a four-member team to develop a Unity-based game promoting NASA's Psyche mission</li>
+          <li>Designed custom sprites and background visuals; managed timelines and deliverables</li> 
+          <li><b>Fun fact:</b> The game doesn't properly run on the website. The ASU Master's student compiled our project incorrectly, having it start at phase D instead of Phase A.</li>
+          <li>Due to them compiling it out of order, the scenes don't connect correctly, causing it to break</li>
+          <li>Here's a link to our repository for the game on my github: <a href="https://github.com/MissionToPsyche-Iridium/iridium_21m_web_game-csu" target="_blank">My Team's Repo</a></li>
+        </ul>
+        <p><a href="https://cis.csuohio.edu/~kakeplin/bigdatafinal/index.html" target="_blank">Book Reccomendation Website</a> | April 2025</p>
+        <ul>
+          <li>Scraped book descriptions from a bookstore and used cosine similarity for genre prediction</li>
+          <li>Built Python scripts for preprocessing and serving results through a custom web API</li>
+          <li>Created an interactive website to display top-10 recommendations by similarity score</li>
+          <li><b>NOTE:</b> I need to run my web API Python script for my website to have functionality</li>
+          <li><b>Sad fact:</b> This is hosted on a server at Cleveland State University, meaning my access will be terminated at any moment. I hope you can still see it before my user gets blocked due to me graduating.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Popup window for email -->
+    <div id="email-window" class="window hidden">
+      <div class="window-header">
+        <span>email.txt</span>
+        <button class="close-btn" onclick="closeAndResetWindow('email-window')">✖</button>
+      </div>
+      <div class="window-content-email">
+        <p>
+          Feel free to contact me at
+          <a href="mailto:keplingerkay02@gmail.com">keplingerkay02@gmail.com</a
+          >!
+        </p>
+      </div>
+    </div>
+    <!-- Popup window for photos -->
+    <div id="photos-window" class="window hidden">
+      <div class="window-header">
+        <span>Kayla's Photos</span>
+        <button class="close-btn" onclick="closeAndResetWindow('photos-window')">✖</button>
+      </div>
+      <div class="photo-album">
+        <button class="arrow left" onclick="prevPhoto()">&#8592;</button>
+    
+        <div class="photo-content">
+          <img id="album-photo" src="" alt="Photo Album" />
+          <p id="photo-caption"></p>
+        </div>
+    
+        <button class="arrow right" onclick="nextPhoto()">&#8594;</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  // functions for the clock and date
+  function updateTime() {
+    const now = new Date();
+    const time = now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    const date = now.toLocaleDateString(undefined, {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+    });
+    document.getElementById("datetime").innerHTML = `${time}<br />${date}`;
+  }
+
+  updateTime();
+  setInterval(updateTime, 60000);
+
+  // function for resetting windows
+  function closeAndResetWindow(id, defaultTop = "100px", defaultLeft = "100px") {
+    const win = document.getElementById(id);
+    win.classList.add("hidden");
+    win.style.top = defaultTop;
+    win.style.left = defaultLeft;
+
+    // Remove taskbar icon
+    const icon = document.querySelector(`.taskbar-icon[data-window="${id}"]`);
+    if (icon) icon.remove();
+  }
+
+  // Make all windows draggable
+  const makeDraggable = (windowId) => {
+    const win = document.getElementById(windowId);
+    const header = win.querySelector(".window-header");
+
+    let offsetX = 0, offsetY = 0;
+    let isDragging = false;
+
+    header.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      offsetX = e.clientX - win.offsetLeft;
+      offsetY = e.clientY - win.offsetTop;
+      win.style.zIndex = Date.now(); // bring to front
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        win.style.left = e.clientX - offsetX + "px";
+        win.style.top = e.clientY - offsetY + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+    });
+  };
+
+  // List of all window IDs to enable dragging
+  const windowIds = [
+    "about-window",
+    "work-history-window",
+    "skills-window",
+    "github-window",
+    "projects-window",
+    "email-window",
+    "photos-window",
+    "linkedin-window"
+  ];
+
+  windowIds.forEach(makeDraggable);
+
+  // code for photos
+  const albumImages = [
+  { src: "album/tokyo-sky-tree.jpg", caption: "25年、5月、11日\n The Tokyo Sky Tree from a street view in Asakusa. I took this during a trip I went on with my Dad when I was 23."},
+  { src: "album/kitties.jpg", caption: "24年、12月、20日\n These are my two cats! Rainbow (female) is on the left, and Sunny (male) is on the right." },
+  { src: "album/butterhorse.jpg", caption: "22年、12月、30日\n This is my dog Buttercup! She's a poodle mix." },
+  { src: "album/leapcastle.jpg", caption: "19年、8月、5日\n This is a photo of the sun room that I took in Leap Castle in Roscrea, Ireland, when I was 17. It's said to be one of the world's most haunted castles. It doesn't seem so scary during the day."},
+  { src: "album/artgallery.jpg", caption: "20年、2月、13日\n A photo of me and my highschool art teacher at an art gallery that my piece was featured in (the piece that's between the two of us). This photo was taken just a few weeks before the world shut down due to COVID-19."},
+  { src: "album/buttercupfrog.jpg", caption: "25年、1月、12日\n A photo of Buttercup wearing a frog hood that I crocheted for her to keep her ears warm during the winter."},
+  { src: "album/beecrochet.jpg", caption: "25年、3月、24日\n This is a photo of the crocheted bee keychains I made for my Esty shop in celebration of Spring."},
+  { src: "album/parfaitbunnies.jpg", caption: "25年、7月、18日\n These are my most recent addition to my Etsy: parfait bunnies!"},
+  { src: "album/threebunnies.jpg", caption: "25年、6月、15日\n This is a photo of three of my toasted marshmallow bunnies at three different sizes! These guys were a huge hit when I first released them due to a video I made on TikTok that got over 1 million views."},
+];
+
+// Preload all album images
+const preloadedImages = [];
+albumImages.forEach((item) => {
+  const img = new Image();
+  img.src = item.src;
+  preloadedImages.push(img);
+});
+
+let currentPhotoIndex = 0;
+
+function showPhoto(index) {
+  const photo = albumImages[index];
+  document.getElementById("album-photo").src = photo.src;
+  document.getElementById("album-photo").alt = photo.caption;
+  document.getElementById("photo-caption").innerText = photo.caption;
+}
+
+function nextPhoto() {
+  currentPhotoIndex = (currentPhotoIndex + 1) % albumImages.length;
+  showPhoto(currentPhotoIndex);
+}
+
+function prevPhoto() {
+  currentPhotoIndex = (currentPhotoIndex - 1 + albumImages.length) % albumImages.length;
+  showPhoto(currentPhotoIndex);
+}
+
+function openWindowById(id) {
+  const win = document.getElementById(id);
+  win.classList.remove("hidden");
+  win.style.top = "100px";
+  win.style.left = "100px";
+  win.style.zIndex = Date.now();
+
+  // Show photo if it's the photo window
+  if (id === "photos-window") {
+    currentPhotoIndex = 0;
+    showPhoto(currentPhotoIndex);
+  }
+
+  // Add icon to taskbar if it doesn't already exist
+  if (!document.querySelector(`.taskbar-icon[data-window="${id}"]`)) {
+    const taskbar = document.getElementById("taskbar-windows");
+    const btn = document.createElement("div");
+    btn.classList.add("taskbar-icon");
+    btn.dataset.window = id;
+
+    let iconSrc = "images/default.ico"; // fallback icon
+
+    // Choose custom icons based on window id
+    if (id === "about-window") iconSrc = "images/1.ico";
+    else if (id === "work-history-window") iconSrc = "images/1.ico";
+    else if (id === "skills-window") iconSrc = "images/1.ico";
+    else if (id === "projects-window") iconSrc = "images/3.ico";
+    else if (id === "github-window") iconSrc = "images/githubblue.jpg";
+    else if (id === "linkedin-window") iconSrc = "images/linkedin.jpg";
+    else if (id === "email-window") iconSrc = "images/Mail app icon.jpg";
+    else if (id === "photos-window") iconSrc = "images/3.ico";
+
+    btn.innerHTML = `
+      <img src="${iconSrc}" alt="${id}" width="20" height="20" />
+      <span>${document.querySelector(`#${id} .window-header span`).innerText}</span>
+      <button class="taskbar-close">✖</button>
+    `;
+
+
+    btn.querySelector("span").onclick = () => {
+      win.classList.remove("hidden");
+      win.style.zIndex = Date.now();
+    };
+
+    btn.querySelector(".taskbar-close").onclick = (e) => {
+      e.stopPropagation();
+      closeAndResetWindow(id);
+    };
+
+    taskbar.appendChild(btn);
+  }
+}
+
+
+// lock button fade screen
+document.addEventListener("DOMContentLoaded", function () {
+  const lockBtn = document.getElementById("lock-btn");
+  lockBtn.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent immediate jump to href
+
+    const wrapper = document.getElementById("desktop");
+    wrapper.classList.add("fade-out");
+
+    setTimeout(function () {
+      window.location.href = "index.html";
+    }, 1000); // Duration must match CSS animation
+  });
+});
+
+
+</script>

@@ -1,0 +1,360 @@
+body {
+  background-color: #cbc3e3;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+  padding: 0 2vw; /* add horizontal padding to avoid text touching the edges */
+  background: transparent;
+}
+
+#background p {
+  font-family: "Kiwi Maru", serif;
+  color: white;
+  font-size: 20px;
+}
+
+#background img {
+  width: clamp(60px, 10vw, 100px); /* responsive gif size */
+  height: auto;
+}
+
+#taskbar {
+  font-family: "Kiwi Maru", serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  color: black;
+  z-index: 999;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.hotbar-right {
+  font-size: 0.9rem;
+  text-align: right;
+  margin-left: auto;
+  white-space: nowrap;
+  padding-right: 8px;
+  overflow: hidden;
+  max-width: 120px;
+}
+
+.hotbar-left button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: #5b4b8a;
+  border-radius: 6px;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropup content (Hidden by Default) */
+.dropup-content {
+  display: none;
+  position: absolute;
+  bottom: 48px; /* match height of taskbar or button */
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropup */
+.dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropup links on hover */
+.dropup-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+/* Change the background color of the dropup button when the dropup content is shown */
+.dropup:hover .start-btn {
+  background-color: #2980b9;
+}
+
+#start-btn {
+  min-width: 60px; /* prevent too-small icon button */
+  height: 48px;
+  font-size: 1.2rem; /* increase icon visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  border: solid white 10px;
+}
+
+.window {
+  font-family: "Kiwi Maru", serif;
+  position: absolute;
+  width: 600px;
+  border: 2px solid #aaa;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.window-header {
+  font-family: "Kiwi Maru", serif;
+  padding: 10px;
+  background-color: #e0e0e0;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.window-content-about-me {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.window-content-work-history {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.window-content-projects {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.window-content-github {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.window-content-linkedin {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.window-content-email {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.window-content-skills {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.window-content-photos {
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* This is where the text file titles are */
+.icon-label {
+  font-size: 10px;
+  font-family: "Kiwi Maru", sans-serif;
+  color: white;
+  text-align: left;
+}
+
+#icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: calc(100vh - 40px);
+  align-content: flex-start;
+  gap: 12px;
+}
+
+#desktop {
+  display: flex;
+  overflow: hidden;
+  transition: opacity 1s ease;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: 50px;
+}
+
+/* Highlight when you hover over an icon */
+.icon-wrapper:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* light white overlay */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px); /* optional: adds that frosted-glass look */
+  cursor: pointer;
+}
+
+.icon-wrapper:focus-within {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 2px solid #8ab4f8;
+}
+
+.photo-album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.photo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+}
+
+.photo-content img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  color: #333;
+  padding: 10px;
+}
+
+.arrow:hover {
+  color: #007acc;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+#lock-btn {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.open-windows {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 10px;
+}
+
+#taskbar-windows {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* spacing between icons */
+  padding: 0 10px;
+  overflow-x: auto; /* optional: allows scrolling if too many icons */
+}
+
+.taskbar-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap; /* prevents wrapping */
+}
+
+.taskbar-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.taskbar-close {
+  background: transparent;
+  border: none;
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
